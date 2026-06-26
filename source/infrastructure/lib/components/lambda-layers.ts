@@ -47,7 +47,9 @@ export class LambdaLayers extends Construct {
     scope: Construct,
     layerId: string | undefined = undefined,
   ): LambdaLayers {
-    const currentId = layerId ?? Stack.of(scope).stackName;
+    // Use the stack's construct id (not stackName) so layer logical ids stay
+    // stable even if the deployed stackName is overridden.
+    const currentId = layerId ?? Stack.of(scope).node.id;
     if (!LambdaLayers.instances[currentId]) {
       LambdaLayers.instances[currentId] = new LambdaLayers(
         scope,

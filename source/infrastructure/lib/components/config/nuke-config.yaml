@@ -56,7 +56,7 @@ accounts:
         - type: glob
           value: aws-controltower-*
         - type: exact
-          value: all-org-cloud-trail
+          value: management-events
       CloudWatchEventsRule:
         - property: Name
           type: glob

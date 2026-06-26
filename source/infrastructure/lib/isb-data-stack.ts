@@ -27,25 +27,25 @@ export class IsbDataStack extends Stack {
     applyIsbTag(this, `${namespaceParam.valueAsString}`);
 
     new CfnOutput(this, "ConfigApplicationIdOut", {
-      exportName: `${this.stackName}-ConfigApplicationId`,
+      exportName: `${this.node.id}-ConfigApplicationId`,
       key: `ConfigApplicationId`,
       value: dataResources.config.application.applicationId,
     });
 
     new CfnOutput(this, "ConfigEnvironmentIdOut", {
-      exportName: `${this.stackName}-ConfigEnvironmentId`,
+      exportName: `${this.node.id}-ConfigEnvironmentId`,
       key: `ConfigEnvironmentId`,
       value: dataResources.config.environment.environmentId,
     });
 
     new CfnOutput(this, "ConfigDeploymentStrategyIdOut", {
-      exportName: `${this.stackName}-ConfigDeploymentStrategyId`,
+      exportName: `${this.node.id}-ConfigDeploymentStrategyId`,
       key: `ConfigDeploymentStrategyId`,
       value: dataResources.config.deploymentStrategy.deploymentStrategyId,
     });
 
     new CfnOutput(this, "GlobalConfigConfigurationProfileIdOut", {
-      exportName: `${this.stackName}-GlobalConfigConfigurationProfileId`,
+      exportName: `${this.node.id}-GlobalConfigConfigurationProfileId`,
       key: `GlobalConfigConfigurationProfileId`,
       value:
         dataResources.config.globalConfigHostedConfiguration
@@ -53,7 +53,7 @@ export class IsbDataStack extends Stack {
     });
 
     new CfnOutput(this, "NukeConfigConfigurationProfileIdOut", {
-      exportName: `${this.stackName}-NukeConfigConfigurationProfileId`,
+      exportName: `${this.node.id}-NukeConfigConfigurationProfileId`,
       key: `NukeConfigConfigurationProfileId`,
       value:
         dataResources.config.nukeConfigHostedConfiguration
@@ -61,7 +61,7 @@ export class IsbDataStack extends Stack {
     });
 
     new CfnOutput(this, "ReportingConfigConfigurationProfileIdOut", {
-      exportName: `${this.stackName}-ReportingConfigConfigurationId`,
+      exportName: `${this.node.id}-ReportingConfigConfigurationId`,
       key: `ReportingConfigConfigurationId`,
       value:
         dataResources.config.reportingConfigHostedConfiguration
@@ -69,19 +69,19 @@ export class IsbDataStack extends Stack {
     });
 
     new CfnOutput(this, "SandboxAccountTableOut", {
-      exportName: `${this.stackName}-SandboxAccountTable`,
+      exportName: `${this.node.id}-SandboxAccountTable`,
       key: `SandboxAccountTable`,
       value: dataResources.sandboxAccountTable.tableName,
     });
 
     new CfnOutput(this, "LeaseTemplateTableOut", {
-      exportName: `${this.stackName}-LeaseTemplateTable`,
+      exportName: `${this.node.id}-LeaseTemplateTable`,
       key: `LeaseTemplateTable`,
       value: dataResources.leaseTemplateTable.tableName,
     });
 
     new CfnOutput(this, "LeaseTableOut", {
-      exportName: `${this.stackName}-LeaseTable`,
+      exportName: `${this.node.id}-LeaseTable`,
       key: `LeaseTable`,
       value: dataResources.leaseTable.tableName,
     });

@@ -25,19 +25,23 @@ const synthesizer = new SolutionsEngineeringSynthesizer({
 new IsbAccountPoolStack(app, "InnovationSandbox-AccountPool", {
   description: `(${context.solutionId}) ${context.solutionName} ${context.version}`,
   synthesizer: synthesizer,
+  stackName: `innovate-sandbox-manage`,
 });
 
 new IsbIdcStack(app, "InnovationSandbox-IDC", {
   description: `(${context.solutionId}-IdcStack) ${context.solutionName} ${context.version}`,
   synthesizer: synthesizer,
+  stackName: `innovate-sandbox-manage-idc-stack`,
 });
 
 new IsbDataStack(app, "InnovationSandbox-Data", {
   description: `(${context.solutionId}-DataStack) ${context.solutionName} ${context.version}`,
   synthesizer: synthesizer,
+  stackName: `innovate-sandbox-manage-data-stack`,
 });
 
 new IsbComputeStack(app, "InnovationSandbox-Compute", {
   description: `(${context.solutionId}-ComputeStack) ${context.solutionName} ${context.version}`,
   synthesizer: synthesizer,
+  stackName: `innovate-sandbox-manage-compute-stack`,
 });
