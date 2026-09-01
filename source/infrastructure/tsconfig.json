@@ -17,6 +17,7 @@
     "lib": ["es2022"],
     "outDir": "cdk.ts.dist",
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@amzn/innovation-sandbox-infrastructure/*": ["lib/*"],
       "@amzn/innovation-sandbox-infrastructure/test/*": ["test/*"],
