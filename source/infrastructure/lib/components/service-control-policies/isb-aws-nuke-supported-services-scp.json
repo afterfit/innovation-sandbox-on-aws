@@ -160,7 +160,8 @@
         "workspaces:*",
         "xray:*",
         "codeconnections:*",
-        "greengrass:*"
+        "greengrass:*",
+        "codestar-connections:*"
       ],
       "Resource": ["*"],
       "Condition": {
