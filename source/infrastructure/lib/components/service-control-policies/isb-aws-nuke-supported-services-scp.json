@@ -162,7 +162,8 @@
         "codeconnections:*",
         "greengrass:*",
         "bedrock-mantle:*",
-        "codestar-connections:*"
+        "codestar-connections:*",
+        "aws-marketplace:*"
       ],
       "Resource": ["*"],
       "Condition": {
