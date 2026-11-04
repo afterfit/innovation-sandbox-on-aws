@@ -161,6 +161,7 @@
         "xray:*",
         "codeconnections:*",
         "greengrass:*",
+        "bedrock-mantle:*",
         "codestar-connections:*"
       ],
       "Resource": ["*"],
