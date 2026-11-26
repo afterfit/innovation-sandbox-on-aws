@@ -158,7 +158,12 @@
         "waf:*",
         "wafv2:*",
         "workspaces:*",
-        "xray:*"
+        "xray:*",
+        "codeconnections:*",
+        "greengrass:*",
+        "bedrock-mantle:*",
+        "codestar-connections:*",
+        "aws-marketplace:*"
       ],
       "Resource": ["*"],
       "Condition": {

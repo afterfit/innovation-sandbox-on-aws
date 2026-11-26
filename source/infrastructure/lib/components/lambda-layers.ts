@@ -47,7 +47,7 @@ export class LambdaLayers extends Construct {
     scope: Construct,
     layerId: string | undefined = undefined,
   ): LambdaLayers {
-    const currentId = layerId ?? Stack.of(scope).stackName;
+    const currentId = layerId ?? Stack.of(scope).node.id;
     LambdaLayers.instances[currentId] ??= new LambdaLayers(
       scope,
       `ISB-Lambda-Layer-${currentId}`,
